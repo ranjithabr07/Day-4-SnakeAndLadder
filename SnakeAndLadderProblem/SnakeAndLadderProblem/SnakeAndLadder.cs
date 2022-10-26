@@ -13,6 +13,11 @@ namespace SnakeAndLadderProblem
         {
             Console.WriteLine("Game Started ");
             Console.WriteLine("Player Position:" + playerPosition);
+            Random random = new Random();
+            int dieRolled = random.Next(1, 7);
+            Console.WriteLine("Die Rolled: " + dieRolled);
+            playerPosition += dieRolled;
+            Console.WriteLine("Player position:" + playerPosition);
         }
     }
 }
