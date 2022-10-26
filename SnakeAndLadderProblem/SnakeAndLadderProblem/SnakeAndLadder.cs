@@ -8,11 +8,12 @@ namespace SnakeAndLadderProblem
 {
     internal class SnakeAndLadder
     {
-        iint playerPosition = 0;
+        int playerPosition = 0;
         const int NO_PLAY = 1;
         const int LADEER = 2;
         const int SNAKE = 3;
         const int WINNING_POSITION = 100;
+        int dieCount = 0;
         public void StartGame()
         {
             Console.WriteLine("Game Started ");
@@ -20,6 +21,7 @@ namespace SnakeAndLadderProblem
 
             while (playerPosition < WINNING_POSITION)
             {
+                dieCount++;
                 Random random = new Random();
                 int dieRolled = random.Next(1, 7);
                 int option = random.Next(1, 4);
@@ -56,6 +58,7 @@ namespace SnakeAndLadderProblem
                 if (playerPosition == WINNING_POSITION)
                 {
                     Console.WriteLine("Player Won the Game");
+                    Console.WriteLine("Number of die rolled is :" + dieCount);
                 }
             }
         }
