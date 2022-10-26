@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SnakeAndLadderProblem
 {
-    public class SnakeAndLadder
+    internal class SnakeAndLadder
     {
         int playerPosition1 = 0;
         int playerPosition2 = 0;
@@ -124,6 +124,5 @@ namespace SnakeAndLadderProblem
             Console.WriteLine("Total Number of Die thrown by Player1: " + dieCountPlayer1);
             Console.WriteLine("Total Number of Die thrown by Player2: " + dieCountPlayer2);
         }
-    
-}
+    }
 }
